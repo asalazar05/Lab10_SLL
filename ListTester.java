@@ -831,14 +831,20 @@ public class ListTester {
 			// IndexedUnsortedList
 
 			// Iterator
-				// TODO: will add in Lab 10
 				// test to construct iterator
-
+			// TODO iterator() throws no Exception
 				// tests after getting iterator	
-
+			// TODO iterator(), hasNext() returns true
+			// TODO iterator(), next() returns A
+			// TODO iterator(), remove() throws IllegalStateException
 				// tests after calling next on an iterator
-
+			// TODO iterator(), next(), hasNext() returns true
+			// TODO iterator(), next(), next() returns B
+			// TODO iterator(), next(), remove() throws no Exxception
 				// tests after calling next and then next on an iterator
+			// TODO iterator(), next(), next(), hasNext() returns false
+			// TODO iterator(), next(), next(), next() throws NoSuchElementException
+			// TODO iterator(), next(), next(), remove() throws no Exxception
 
 			// ListIterator
 			if (SUPPORTS_LIST_ITERATOR) {
@@ -928,16 +934,24 @@ public class ListTester {
 			// IndexedUnsortedList
 
 			// Iterator
-				// TODO: will add in Lab 10
 				// test to construct iterator
-
+			// TODO iterator() throws no Exception
 				// tests after getting iterator	
-
+			// TODO iterator(), hasNext() returns true
+			// TODO iterator(), next() returns A
+			// TODO iterator(), remove() throws IllegalStateException
 				// tests after calling next on an iterator
-
+			// TODO iterator(), next(), hasNext() returns true
+			// TODO iterator(), next(), next() returns B
+			// TODO iterator(), next(), remove() throws no Exxception
 				// tests after calling next and then next on an iterator
-
+			// TODO iterator(), next(), next(), hasNext() returns true
+			// TODO iterator(), next(), next(), next() returns C
+			// TODO iterator(), next(), next(), remove() throws no Exxception
 				// tests after calling next and then next and then next on an iterator
+			// TODO iterator(), next(), next(), next(), hasNext() returns false
+			// TODO iterator(), next(), next(), next(), next() throws NoSuchElementException
+			// TODO iterator(), next(), next(), next(), remove() throws no Exxception
 
 			// ListIterator
 			if (SUPPORTS_LIST_ITERATOR) {
