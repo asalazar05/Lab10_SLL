@@ -292,13 +292,11 @@ public class IUArrayList<E> implements IndexedUnsortedList<E> {
 	// DON'T DELETE ME, HOWEVER!!!
 	@Override
 	public ListIterator<E> listIterator() {
-		// TODO Auto-generated method stub
 		throw new UnsupportedOperationException();
 	}
 
 	@Override
 	public ListIterator<E> listIterator(int startingIndex) {
-		// TODO Auto-generated method stub
 		throw new UnsupportedOperationException();
 	}
 

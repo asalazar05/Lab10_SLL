@@ -189,7 +189,7 @@ public class ListTester {
 			// Scenario: 15
 		testEmptyList(A_remove0_emptyList, "A_remove0_emptyList");
 			// Scenario: 44
-
+		// TODO iterator scenario
 
 		//1-element to 2-element
 			// Scenario: 06
@@ -202,11 +202,11 @@ public class ListTester {
 			
 		//1-element to changed 1-element via set()
 			// Scenario: 16
-
+		// TODO
 			
 		//2-element to empty list
 			// Scenario: 47
-
+		// TODO iterator scenario
 			
 		//2-element to 1-element
 			// Scenario: 25
@@ -214,53 +214,53 @@ public class ListTester {
 			// Scenario: 26
 		testSingleElementList(AB_removeLast_A, "AB_removeLast_A", LIST_A, STRING_A);
 			// Scenario: 27
-
+		// TODO
 			// Scenario: 28
 		testSingleElementList(AB_removeB_A, "AB_removeB_A", LIST_A, STRING_A);
 			// Scenario: 29
-
+		// TODO
 			// Scenario: 30
-
+		// TODO
 			// Scenario: 45
-
+		// TODO iterator scenario
 			// Scenario: 46
-
+		// TODO iterator scenario
 			
 		//2-element to 3-element
 			// Scenario: 17
 		testThreeElementList(AB_addToFrontC_CAB, "AB_addToFrontC_CAB", LIST_CAB, STRING_CAB);
 			// Scenario: 20 
-		testThreeElementList(AB_addAfterC_CAB, "AB_addAfterC_CAB", LIST_ABC, STRING_ABC);
+		testThreeElementList(AB_addAfterCB_ABC, "AB_addAfterC_CAB", LIST_ABC, STRING_ABC);
 			// Scenario: 23
-
+		// TODO
 			
 		//2-element to changed 2-element via set()
 
 		//3-element to empty list
 			// Scenario: 54
-
+		// TODO iterator scenario
 			
 		//3-element to 1-element
 			// Scenario: 51
-
+		// TODO iterator scenario
 			// Scenario: 52
-
+		// TODO iterator scenario
 			// Scenario: 53
-
+		// TODO iterator scenario
 			
 		//3-element to 2-element
 			// Scenario: 33
-
+		// TODO
 			// Scenario: 37
-
+		// TODO
 			// Scenario: 39
-
+		// TODO
 			// Scenario: 48
-
+		// TODO iterator scenario
 			// Scenario: 49
-
+		// TODO iterator scenario
 			// Scenario: 50
-
+		// TODO iterator scenario
 			
 		//3-element to changed 3-element via set()
 
@@ -271,7 +271,7 @@ public class ListTester {
 
 
 		//Iterator concurrency tests
-		// test_IterConcurrency();
+		test_IterConcurrency();
 		if (SUPPORTS_LIST_ITERATOR) {
 			test_ListIterConcurrency();
 		}
@@ -344,7 +344,6 @@ public class ListTester {
 	/** Scenario #04: [] -> add(A) -> [A] 
 	 * @return [A] after add(A)
 	 */
-//TODO: Scenario lambdas
 	private IndexedUnsortedList<Integer> emptyList_addA_A() {
 		IndexedUnsortedList<Integer> list = newList();
 		list.add(ELEMENT_A);
@@ -437,7 +436,7 @@ public class ListTester {
 	/** Scenario #16: [A] -> set(0,B) -> [B] 
 	 * @return [B] after set(0,B)
 	 */
-
+	// TODO
 	 
 	/** Scenario #17: [A,B] -> addToFront(C) -> [C,A,B] 
 	 * @return [C,A,B] after addToFront(C)
@@ -452,17 +451,17 @@ public class ListTester {
 	/** Scenario #20: [A,B] -> addAfter(C,B) -> [A,B,C] 
 	 * @return [A,B,C] after addAfter(C,B)
 	 */
-	private IndexedUnsortedList<Integer> AB_addAfterC_CAB() {
+	private IndexedUnsortedList<Integer> AB_addAfterCB_ABC() {
 		IndexedUnsortedList<Integer> list =  A_addToRearB_AB();
 		list.addAfter(ELEMENT_C, ELEMENT_B);
 		return list;
 	}
-	private Scenario<Integer> AB_addAfterC_CAB = () -> AB_addAfterC_CAB();
+	private Scenario<Integer> AB_addAfterCB_ABC = () -> AB_addAfterCB_ABC();
 	 
 	/** Scenario #23: [A,B] -> add(1,C) -> [A,C,B] 
 	 * @return [A,C,B] after add(1,C)
 	 */
-
+	// TODO
 	 
 	/** Scenario #25: [A,B] -> removeFirst() -> [B]
 	 * @return [B] after removeFirst()
@@ -488,12 +487,12 @@ public class ListTester {
 	/** Scenario #27: [A,B] -> remove(A) -> [B]
 	 * @return [B] after remove(A)
 	 */
-	private IndexedUnsortedList<Integer> AB_remove_A() {
+	private IndexedUnsortedList<Integer> AB_removeA_B() {
 		IndexedUnsortedList<Integer> list = A_addToRearB_AB();
 		list.remove(ELEMENT_A);
 		return list;
 	}
-	private Scenario<Integer> AB_remove_A = () -> AB_remove_A();
+	private Scenario<Integer> AB_removeA_B = () -> AB_removeA_B();
 
 	 
 	/** Scenario #28: [A,B] -> remove(B) -> [A]
@@ -509,52 +508,52 @@ public class ListTester {
 	/** Scenario #29: [A,B] -> remove(0) -> [B]
 	 * @return [B] after remove(0)
 	 */
-
+	// TODO
 	 
 	/** Scenario #30: [A,B] -> remove(1) -> [A]
 	 * @return [A] after remove(1)
 	 */
-
+	// TODO
 	 
 	/** Scenario #33: [A,B,C] -> removeFirst() -> [B,C]
 	 * @return [B,C] after removeFirst()
 	 */
-
+	// TODO
 	 
 	/** Scenario #37: [A,B,C] -> remove(C) -> [A,B]
 	 * @return [A,B] after remove(C)
 	 */
-
+	// TODO
 	 
 	/** Scenario #39: [A,B,C] -> remove(1) -> [A,C]
 	 * @return [A,C] after remove(1)
 	 */
-
+	// TODO
 	 
 	/** Scenario #44: [A] -> iterator, next(), remove() -> []
 	 * @return [] after iterator, next(), remove()
 	 */
-
+	// TODO Iterator Scenarios
 	 
 	/** Scenario #45: [A,B] -> iterator, next(), remove() -> [B]
 	 * @return [B] after iterator, next(), remove()
 	 */
-
+	// TODO
 	 
 	/** Scenario #46: [A,B] -> iterator, next(), next(), remove() -> [A]
 	 * @return [A] after iterator, next(), next(), remove()
 	 */
-
+	// TODO
 	 
 	/** Scenario #47: [A,B] -> iterator, next(), remove(), next(), remove() -> []
 	 * @return [] after iterator, next(), remove(), next(), remove()
 	 */
-
+	// TODO
 	 
 	/** Scenario #48: [A,B,C] -> iterator, next(), remove() -> [B,C]
 	 * @return [B,C] after iterator, next(), remove()
 	 */
-
+	// TODO
 	 
 	/** Scenario #49: [A,B,C] -> iterator, next(), next(), remove() -> [A,C]
 	 * @return [A,C] after iterator, next(), next(), remove()
@@ -564,27 +563,27 @@ public class ListTester {
 	/** Scenario #50: [A,B,C] -> iterator, next(), next(), next(), remove() -> [A,B]
 	 * @return [A,B] after iterator, next(), next(), next(), remove()
 	 */
-
+	// TODO
 	 
 	/** Scenario #51: [A,B,C] -> iterator, next(), remove(), next(), remove() -> [C]
 	 * @return [C] after iterator, next(), remove(), next(), remove()
 	 */
-
+	// TODO
 	 
 	/** Scenario #52: [A,B,C] -> iterator, next(), remove(), next(), next(), remove() -> [B]
 	 * @return [B] after iterator, next(), remove(), next(), next(), remove()
 	 */
-
+	// TODO
 	 
 	/** Scenario #53: [A,B,C] -> iterator, next(), next(), remove(), next(), remove() -> [A]
 	 * @return [A] after iterator, next(), next(), remove(), next(), remove()
 	 */
-
+	// TODO
 	 
 	/** Scenario #54: [A,B,C] -> iterator, next(), remove(), next(), remove(), next(), remove() -> []
 	 * @return [] after iterator, next(), remove(), next(), remove(), next(), remove()
 	 */
-
+	// TODO
 	 
 	/////////////////////////////////
 	//XXX Tests for 0-element list
@@ -871,9 +870,7 @@ public class ListTester {
 	 */
 	private void testThreeElementList(Scenario<Integer> scenario, String scenarioName, Integer[] contents, String contentsString) {
 		System.out.printf("\nSCENARIO: %s\n\n", scenarioName);
-		try {
-			//TODO: tests for scenarios resulting in a 3-element list
-			
+		try {			
 			printTest(scenarioName + "_testAddToFront", testAddToFront(scenario.build(), ELEMENT_X, Result.NoException));
 			printTest(scenarioName + "_testAddToRear", testAddToRear(scenario.build(), ELEMENT_X, Result.NoException));
 			printTest(scenarioName + "_testAddAfter" + contentsString.charAt(0), testAddAfter(scenario.build(), contents[0], ELEMENT_X, Result.NoException));
