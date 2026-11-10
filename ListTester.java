@@ -230,7 +230,7 @@ public class ListTester {
 			// Scenario: 17
 		testThreeElementList(AB_addToFrontC_CAB, "AB_addToFrontC_CAB", LIST_CAB, STRING_CAB);
 			// Scenario: 20 
-		testThreeElementList(AB_addAfterCB_ABC, "AB_addAfterC_CAB", LIST_ABC, STRING_ABC);
+		testThreeElementList(AB_addAfterCB_ABC, "AB_addAfterCB_ABC", LIST_ABC, STRING_ABC);
 			// Scenario: 23
 		// TODO
 			
